@@ -1,0 +1,43 @@
+{
+	"name": "Source_Parquet_DS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Sourcestorage",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "emp_data.parquet",
+				"folderPath": "input",
+				"container": "ad203files"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": [
+			{
+				"name": "empno",
+				"type": "INT_32"
+			},
+			{
+				"name": "fname",
+				"type": "UTF8"
+			},
+			{
+				"name": "lname",
+				"type": "UTF8"
+			},
+			{
+				"name": "dno",
+				"type": "INT_32"
+			},
+			{
+				"name": "sal",
+				"type": "INT_32"
+			}
+		]
+	},
+	"type": "Microsoft.Synapse/workspaces/datasets"
+}
